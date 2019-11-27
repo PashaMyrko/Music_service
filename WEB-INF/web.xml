@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <filter>
+        <filter-name>AuthFilter</filter-name>
+        <filter-class>servlets.filter.AuthFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>AuthFilter</filter-name>
+        <url-pattern>/</url-pattern>
+    </filter-mapping>
+
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>servlets.servlet.LogoutServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Registration</servlet-name>
+        <jsp-file>/registration.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Registration</servlet-name>
+        <url-pattern>/registration</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminComposition</servlet-name>
+        <servlet-class>servlets.servlet.admin.composition.AdminCompositionServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AdminComposition</servlet-name>
+        <url-pattern>/admin_composition</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminCompositionAction</servlet-name>
+        <servlet-class>servlets.servlet.admin.composition.CompositionActionServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AdminCompositionAction</servlet-name>
+        <url-pattern>/admin_composition_action</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddCompositionServlet</servlet-name>
+        <servlet-class>servlets.servlet.admin.composition.AddCompositionServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AddCompositionServlet</servlet-name>
+        <url-pattern>/add_composition</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminAlbum</servlet-name>
+        <servlet-class>servlets.servlet.admin.album.AdminAlbumServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AdminAlbum</servlet-name>
+        <url-pattern>/admin_album</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminAlbumAction</servlet-name>
+        <servlet-class>servlets.servlet.admin.album.AlbumActionServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AdminAlbumAction</servlet-name>
+        <url-pattern>/admin_album_action</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddAlbumServlet</servlet-name>
+        <servlet-class>servlets.servlet.admin.album.AddAlbumServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AddAlbumServlet</servlet-name>
+        <url-pattern>/add_album</url-pattern>
+    </servlet-mapping>
+</web-app>
